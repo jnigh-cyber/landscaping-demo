@@ -30,10 +30,10 @@ export const services = [
         id: 4,
         title: 'Mulch Installation',
         description: 'Fresh mulch delivery and installation for beds and boarders.',
-        price: '450',
+        price: 450,
         duration: '2-3 hours',
-        category: ['landscapng'],
-        season: ['spring', 'fall']
+        category: ['landscaping'],
+        season: ['spring', 'fall'],
     },
     {
         id: 5,
@@ -51,7 +51,7 @@ export const services = [
         description: 'Removal of any dirt or algae build up on driveways or walkways making them look like new again.',
         price: 400,
         duration: '2-3 hours',
-        category: ['cleanup'],
+        category: ['hardscaping'],
         season: ['summer','spring','fall'],
     }
 ]

@@ -24,7 +24,7 @@ export const testimonials = [
         id: 4,
         name: 'Patty Reds',
         service: 'Weekly Lawn Mow',
-        quote: 'Always on time for the weekly mow. Makes my lawn look incredible. Definitely recommed to anyone looking for a sharp looking lawn.',
+        quote: 'Great service, will always recommend.',
         rating: 5,
     },
     {
