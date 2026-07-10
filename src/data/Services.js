@@ -2,7 +2,7 @@ export const services = [
     {
         id: 1,
         title: 'Weekly Lawn Mow',
-        description: '',
+        description: 'Mowing, edging, and cleanup, scheduled weekly through out the growing season.',
         price: 70,
         duration: '30-45 mins',
         category: ['lawn-care'],
@@ -11,7 +11,7 @@ export const services = [
     {
         id: 2,
         title: 'Spring Cleanup',
-        description: '',
+        description: 'Bed clearing, dead growth removal, and mulch refresh to kick off the season.',
         price: 225,
         duration: '1-2 hours',
         category: ['cleanup'],
@@ -20,16 +20,16 @@ export const services = [
     {
         id: 3,
         title: 'Fall Leaf Removal',
-        description: '',
+        description: 'Full property leaf clearing and removal. One-time or recurring.',
         price: 150,
-        duration: '1 hour',
+        duration: '1-2 hours',
         category: ['cleanup'],
         season: ['fall'],
     },
     {
         id: 4,
         title: 'Mulch Installation',
-        description: '',
+        description: 'Fresh mulch delivery and installation for beds and boarders.',
         price: '450',
         duration: '2-3 hours',
         category: ['landscapng'],
@@ -38,7 +38,7 @@ export const services = [
     {
         id: 5,
         title: 'Gutter Cleaning',
-        description: '',
+        description: 'Removal of leafs, sticks, and any other debris to get those gutters flowing strong.',
         price: 125,
         duration: '1-2 hours',
         category: ['cleanup'],
@@ -48,7 +48,7 @@ export const services = [
     {
         id: 6,
         title: 'Driveway & Walkway Pressure Washing',
-        description: '',
+        description: 'Removal of any dirt or algae build up on driveways or walkways making them look like new again.',
         price: 400,
         duration: '2-3 hours',
         category: ['cleanup'],
