@@ -1,8 +1,18 @@
 import React from 'react'
+import {services} from '../data/services'
+import ServiceCard from '../components/ServiceCard'
 
 function Services() {
   return (
-    <div>Services</div>
+    <>
+      <section>
+        <div>
+          {services.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+          ))}
+        </div>
+      </section>
+    </>
   )
 }
 
