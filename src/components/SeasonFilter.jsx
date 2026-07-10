@@ -1,8 +1,22 @@
-import React from 'react'
+import {useState} from 'react'
 
-function SeasonFilter() {
+const seasons = ['all','summer', 'spring', 'fall', 'winter']
+
+function SeasonFilter({activeSeason, setActiveSeason}) {
   return (
-    <div>SeasonFilter</div>
+    <>
+      <div>
+        {seasons.map((season) => (
+          <button
+            key={season}
+            onClick={() => setActiveSeason(season)}
+            className={activeSeason === season ? 'font-bold' : ''}
+          >
+            {season}
+          </button>
+        ))}
+      </div>
+    </>
   )
 }
 
