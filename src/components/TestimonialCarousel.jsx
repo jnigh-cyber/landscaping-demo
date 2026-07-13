@@ -17,7 +17,9 @@ function TestimonialCarousel() {
   return (
     <section className="px-4 py-8 md:py-16">
       <div className="max-w-2xl mx-auto text-center">
-        <div className="text-accent text-lg mb-4">{'★'.repeat(current.rating)}</div>
+        <div className="text-accent text-lg mb-4" aria-label={`${current.rating} out of 5 stars`}>
+          {'★'.repeat(current.rating)}
+        </div>
 
         <div className="min-h-32 md:min-h-24 flex items-center justify-center">
           <p className="font-body text-lg md:text-xl text-text leading-relaxed">

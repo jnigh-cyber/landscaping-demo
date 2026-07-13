@@ -2,7 +2,7 @@
 
 A responsive marketing site for landscaping businesses, built as a portfolio project and as a reusable template I can adapt for real clients. Built on the same core stack as my [auto detailing demo](https://github.com/jnigh-cyber/auto-detail-demo), with a new season-based filtering feature and a fully distinct visual identity, so it demonstrates I can vary design direction, not just reskin the same template.
 
-**[Live Demo](Coming soon)**
+**[Live Demo](https://ls-demo-lovat.vercel.app/)**
 
 ## Why this project
 
@@ -69,9 +69,8 @@ src/
 
 ## What's next
 
-- [ ] Automated tests for the season filter and service-to-contact prefill flow
+- [X] Automated tests for the season filter and service-to-contact prefill flow
 - [ ] Logo mark (currently a text wordmark by design)
-- [ ] Optional CSS-only animation pass (Framer Motion intentionally skipped on this project in favor of understanding the underlying `IntersectionObserver` / CSS approach)
 
 ## Author
 
