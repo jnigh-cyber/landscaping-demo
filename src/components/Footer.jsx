@@ -18,7 +18,7 @@ function Footer() {
           <Link to='/contact'>Contact</Link>
         </nav>
         <div>
-          <p>[owner@grassandmoreco.com]</p>
+          <p>owner@grassandmoreco.com</p>
           <p>(336) 123-4567</p>
         </div>
       </div>
