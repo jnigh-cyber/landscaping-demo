@@ -1,35 +1,77 @@
-# Landscaping demo site
+# Landscaping Demo Site
 
-A responsive marketing site for landscaping businesses, built not only as a portfolio project but as a reusable template I can adapt for future clients. This project demonstrates React fundamentals such as component architecture, state management, client-side routing, and real form submission.
+A responsive marketing site for landscaping businesses, built as a portfolio project and as a reusable template I can adapt for real clients. Built on the same core stack as my [auto detailing demo](https://github.com/jnigh-cyber/auto-detail-demo), with a new season-based filtering feature and a fully distinct visual identity, so it demonstrates I can vary design direction, not just reskin the same template.
 
 **[Live Demo](Coming soon)**
 
 ## Why this project
 
-This was built to build upon what I learned from the auto detailing website while getting back into front-end development. I wanted to deepen my React knowledge in a way that's also genuinely reusable, something I could adapt and plug in for potential landscaping clients down the road. 
+Built to build on what I learned from my auto detailing site while getting back into front-end development. This one adds a new piece of state logic (a season-based service filter with lifted state), a service-to-contact-form handoff using React Router's location state, and was built with testing, environment variables, and documentation planned in from the start rather than added afterward.
 
-## Tech Stack
+## Tech stack
 
-**React** (Vite), component architecture, hooks
-**React Router**, client-side routing with nested layout routes
-**TailwindCSS v4**, responsive styling with custom theme (colors, fonts defined via `@theme`)
-**Framer Motion**, entrance and scroll-triggered animations, with `prefers-reduced-motion` support
-**Formspree**, working contact form submission (no back-end required)
+- **React** (Vite), component architecture, hooks (`useState`, `useEffect`)
+- **React Router**, client-side routing with nested layout routes and location state for cross-page data handoff
+- **Tailwind CSS v4**, custom theme via `@theme`, contemporary charcoal and green palette
+- **Lucide React**, category-mapped icons for services and value pillars
+- **Formspree**, working contact form submission (no backend required)
+- **Prettier**, enforced formatting consistency across the codebase
 
 ## Features
 
 - Fully responsive layout, including a custom mobile navigation menu
-- Data-driven `ServiceCard` and `TestimonialCarousel` components, rendered from structured data arrays, with array-based category tagging to support filtering
-- A season filter (Spring / Summer / Fall / Winter / All) that filters services by an array-based `season` field
-- Stateful testimonial carousel with wraparound navigation and dot indicators
-- Contact form with controlled inputs, loading/success/error states, and real email delivery via Formspree
+- **Season filter** (Spring / Summer / Fall / Winter / All): filters the service list by an array-based `season` field, using lifted state shared between the filter buttons and the service grid, and array-based `.includes()` matching so a single service can belong to multiple seasons
+- **Click-to-quote**: clicking any service card navigates to the contact form with the message field pre-filled with that service's name, using React Router's `state` on `Link` and `useLocation` to read it back out
+- Data-driven `ServiceCard` and `TestimonialCarousel` components, each service and category mapped to a distinct icon rather than a single repeated graphic
+- Contact form with controlled inputs, loading/success/error states, phone-required validation via a regex `pattern`, and real email delivery via Formspree
 - Environment-variable-based configuration (Formspree endpoint is not hardcoded in source)
-- Scroll-triggered and page-load animations built with accessibility in mind, all motion respects the user's OS-level reduced-motion preference
-- Optimized for performance: images sized and compressed for web, `fetchpriority` used on the largest contentful element
+- A stat bar overlapping the hero image, using negative margin to create a layered, contemporary feel
+- Full accessibility pass, including `aria-pressed` on the season filter toggles and `aria-label`s on icon-only buttons
 
 ## Performance
 
 Lighthouse scores (mobile, production build): TBD
+
+## Getting started locally
+
+```bash
+git clone [repo URL]
+cd landscaping-site
+npm install
+```
+
+Create a `.env` file in the project root:
+```
+VITE_FORMSPREE_URL=your_formspree_endpoint_here
+```
+
+Then run:
+```bash
+npm run dev
+```
+
+Format the codebase:
+```bash
+npm run format
+```
+
+## Project structure
+
+```
+src/
+  components/   # Navbar, Footer, Hero, ServiceCard, SeasonFilter, TestimonialCarousel, ContactForm
+  pages/        # Home, Services, About, Contact
+  data/         # services.js, testimonials.js, serviceIcons.js, pillars.js
+  Layout.jsx
+  App.jsx
+  main.jsx
+```
+
+## What's next
+
+- [ ] Automated tests for the season filter and service-to-contact prefill flow
+- [ ] Logo mark (currently a text wordmark by design)
+- [ ] Optional CSS-only animation pass (Framer Motion intentionally skipped on this project in favor of understanding the underlying `IntersectionObserver` / CSS approach)
 
 ## Author
 
